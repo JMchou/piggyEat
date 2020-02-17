@@ -18,7 +18,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-gH-ohh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group-1" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-Qm-De6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingPiggy" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-Qm-De6">
                                 <rect key="frame" x="32" y="273" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="XPF-u7-3nh"/>
@@ -44,7 +44,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group-1" width="866" height="789"/>
+        <image name="LoadingPiggy" width="866" height="789"/>
         <image name="background" width="256" height="256"/>
     </resources>
 </document>

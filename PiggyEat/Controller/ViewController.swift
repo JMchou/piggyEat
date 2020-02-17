@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         let number = randomNumber(min: 1, max: 9)
         bottomPigImage.image = UIImage(named: "piggy\(number).png")
         
+        
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
