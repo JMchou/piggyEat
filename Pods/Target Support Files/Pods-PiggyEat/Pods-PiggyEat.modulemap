@@ -1,0 +1,6 @@
+framework module Pods_PiggyEat {
+  umbrella header "Pods-PiggyEat-umbrella.h"
+
+  export *
+  module * { export * }
+}

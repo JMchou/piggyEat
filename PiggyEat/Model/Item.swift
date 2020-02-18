@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Item {
-    let name: String = ""
-    let date: Double = 0.0
+class Item: Object {
+    @objc dynamic var name: String = ""
+    @objc dynamic var date: Date?
 }

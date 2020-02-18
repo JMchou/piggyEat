@@ -8,28 +8,35 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MenuViewController: UITableViewController {
     
-    private var foodSelection = ["Sushi", "Panda", "chipotle"]
+    private var foodSelection: Results<Item>?
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadData()
     }
     
-    // MARK: - Table view data source
+    // MARK: - Table view data sources
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return foodSelection.count
+        return foodSelection?.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodItem", for: indexPath)
         
-        cell.textLabel?.text = foodSelection[indexPath.row]
+        if let item = foodSelection?[indexPath.row] {
+            cell.textLabel?.text = item.name
+        } else {
+            cell.textLabel?.text = "Empty menu. Add your favorite food!"
+        }
+        
         return cell
     }
     
@@ -43,13 +50,13 @@ class MenuViewController: UITableViewController {
         
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             
-            if let text = textField.text {
-                self.foodSelection.append(text)
-                self.tableView.reloadData()
-            }
+            let newItem = Item()
+            newItem.name = textField.text!
+            newItem.date = Date()
+            
+            self.saveData(data: newItem)
+            self.tableView.reloadData()
         }
-        
-        
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Add a food option"
@@ -59,4 +66,19 @@ class MenuViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-}
+    //MARK: - Supporting functions
+    
+    func saveData(data: Item) {
+        do {
+        try realm.write {
+            realm.add(data)
+            }
+        } catch {
+            print("Error saving data. \(data)")
+        }
+    }
+    
+    func loadData() {
+        foodSelection = realm.objects(Item.self)
+    }
+} 

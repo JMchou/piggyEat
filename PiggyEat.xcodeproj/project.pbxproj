@@ -15,6 +15,7 @@
 		4BD726AE23F3F3BD00469140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726AC23F3F3BD00469140 /* Main.storyboard */; };
 		4BD726B023F3F3BE00469140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726AF23F3F3BE00469140 /* Assets.xcassets */; };
 		4BD726B323F3F3BE00469140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726B123F3F3BE00469140 /* LaunchScreen.storyboard */; };
+		FF8D04A3EB4AF54D0815579F /* Pods_PiggyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		4BD726AF23F3F3BE00469140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD726B223F3F3BE00469140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BD726B423F3F3BE00469140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyEat.release.xcconfig"; path = "Target Support Files/Pods-PiggyEat/Pods-PiggyEat.release.xcconfig"; sourceTree = "<group>"; };
+		90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyEat.debug.xcconfig"; path = "Target Support Files/Pods-PiggyEat/Pods-PiggyEat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +39,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8D04A3EB4AF54D0815579F /* Pods_PiggyEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FDEF5B27ACE1DC939FDF2E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */,
+				8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4B0AC5A823F64D9200DB9BE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +86,8 @@
 			children = (
 				4BD726A523F3F3BD00469140 /* PiggyEat */,
 				4BD726A423F3F3BD00469140 /* Products */,
+				2FDEF5B27ACE1DC939FDF2E9 /* Pods */,
+				B040B0EF7962A99F3ABCDAFB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +114,14 @@
 			path = PiggyEat;
 			sourceTree = "<group>";
 		};
+		B040B0EF7962A99F3ABCDAFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BD726B723F3F3BE00469140 /* Build configuration list for PBXNativeTarget "PiggyEat" */;
 			buildPhases = (
+				276782AC47375FFB47522C39 /* [CP] Check Pods Manifest.lock */,
 				4BD7269F23F3F3BD00469140 /* Sources */,
 				4BD726A023F3F3BD00469140 /* Frameworks */,
 				4BD726A123F3F3BD00469140 /* Resources */,
+				61DD402EF758D81A855CE5B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +189,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		276782AC47375FFB47522C39 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PiggyEat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61DD402EF758D81A855CE5B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4BD7269F23F3F3BD00469140 /* Sources */ = {
@@ -314,6 +383,7 @@
 		};
 		4BD726B823F3F3BE00469140 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +402,7 @@
 		};
 		4BD726B923F3F3BE00469140 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
