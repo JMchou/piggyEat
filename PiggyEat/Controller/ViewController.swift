@@ -7,12 +7,13 @@
 //
 
 import UIKit
-import RealmSwift
+import CoreData
 
 class ViewController: UIViewController {
     
-    private let realm = try! Realm()
-    private var foodSelection: Results<Item>?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let menu = Menu.sharedInstance
     
     @IBOutlet weak var foodChoice: UILabel!
     @IBOutlet weak var bottomPigImage: UIImageView!
@@ -28,27 +29,37 @@ class ViewController: UIViewController {
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
-        guard let menu = foodSelection, menu.count > 0 else {
-            return
+        var maxNumber = 0
+        
+        if menu.foodArray.count > 0 {
+            maxNumber = menu.foodArray.count
+            let position = randomNumber(min: 0, max: maxNumber - 1)
+            foodChoice.text = menu.foodArray[position].name
         }
         
-        let position = randomNumber(min: 0, max: menu.count - 1)
         let pigNumber = randomNumber(min: 1, max: 9)
-        
-        foodChoice.text = menu[position].name
         bottomPigImage.image = UIImage(named: "piggy\(pigNumber).png")
-        
+
     }
-    
+
     private func randomNumber(min: Int, max: Int) -> Int {
         return Int.random(in: min...max)
     }
+
     
-    
-    //MARK: - Data
+    //MARK: - Data Handle
     
     func loadData() {
-        foodSelection = realm.objects(Item.self)
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            menu.foodArray =  try context.fetch(request)
+        } catch {
+            print("Error occurred when trying to fetch data. \(error)")
+        }
     }
 }
 
+extension ViewController:   UINavigationControllerDelegate {
+    
+    
+}

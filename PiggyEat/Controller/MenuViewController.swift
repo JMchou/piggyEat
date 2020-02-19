@@ -8,56 +8,59 @@
 //
 
 import UIKit
-import RealmSwift
+import CoreData
 
 class MenuViewController: UITableViewController {
     
-    private var foodSelection: Results<Item>?
-    let realm = try! Realm()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    let menu = Menu.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadData()
     }
     
     // MARK: - Table view data sources
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return foodSelection?.count ?? 1
+        return menu.foodArray.count
     }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "foodItem", for: indexPath)
-        
-        if let item = foodSelection?[indexPath.row] {
-            cell.textLabel?.text = item.name
-        } else {
-            cell.textLabel?.text = "Empty menu. Add your favorite food!"
-        }
-        
+
+        let item = menu.foodArray[indexPath.row]
+        cell.textLabel?.text = item.name
+        cell.textLabel?.textColor = UIColor.black
+
         return cell
     }
-    
+
     //MARK: - Add New items
-    
+
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
-        
+
         var textField = UITextField()
-        
+
         let alert = UIAlertController(title: "Add new food item", message: "", preferredStyle: .alert)
-        
+
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             
-            let newItem = Item()
+            let newItem = Item(context: self.context)
+            
             newItem.name = textField.text!
             newItem.date = Date()
             
+            self.menu.foodArray.append(newItem)
             self.saveData(data: newItem)
             self.tableView.reloadData()
         }
-        
+
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Add a food option"
             textField = alertTextField
@@ -65,20 +68,23 @@ class MenuViewController: UITableViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
-    
-    //MARK: - Supporting functions
-    
+
+    //MARK: - Data Handle
+
     func saveData(data: Item) {
         do {
-        try realm.write {
-            realm.add(data)
-            }
+            try context.save()
         } catch {
-            print("Error saving data. \(data)")
+            print("Error occurred when trying to save \(error)")
         }
     }
-    
+
     func loadData() {
-        foodSelection = realm.objects(Item.self)
+        let request : NSFetchRequest<Item> = Item.fetchRequest()
+        do {
+            menu.foodArray =  try context.fetch(request)
+        } catch {
+            print("Error occurred when trying to fetch data. \(error)")
+        }
     }
 } 

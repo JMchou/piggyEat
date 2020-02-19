@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="evb-s5-u6A">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="evb-s5-u6A">
+    <device id="retina6_5" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xYU-zw-227" kind="show" identifier="ToMenu" id="ByJ-Gn-CVT"/>
+                                    <segue destination="L3r-XE-gAr" kind="show" id="H6P-k7-Svh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
@@ -80,17 +80,13 @@
             <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
         </scene>
         <!--Menu View Controller-->
-        <scene sceneID="2v3-xX-N2g">
+        <scene sceneID="qw0-Rx-baw">
             <objects>
-                <viewController id="xYU-zw-227" customClass="MenuViewController" customModule="PiggyEat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zWl-D1-6Q4">
+                <tableViewController id="L3r-XE-gAr" customClass="MenuViewController" customModule="PiggyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZO-cr-B04">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" id="Q3L-BD-mOX">
-                            <rect key="frame" x="0.0" y="111" width="414" height="896"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodItem" rowHeight="55" id="XkL-3p-SHE">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55"/>
@@ -99,20 +95,25 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="L3r-XE-gAr" id="eTs-mF-2CS"/>
+                            <outlet property="delegate" destination="L3r-XE-gAr" id="XoJ-Rq-Oe3"/>
+                        </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="rh7-lH-zMY">
-                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="ukR-Gx-Y9I">
+                    <navigationItem key="navigationItem" id="a5d-tA-wer">
+                        <barButtonItem key="rightBarButtonItem" title="Add new food" id="Zkd-tS-0aS">
                             <connections>
-                                <action selector="addbuttonPressed:" destination="xYU-zw-227" id="J4J-e8-ecW"/>
+                                <action selector="addbuttonPressed:" destination="L3r-XE-gAr" id="abZ-CX-G4b"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PC2-3L-ILw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5f-Rv-DzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855.072463768116" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1891" y="139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yye-Ox-NyQ">
@@ -142,6 +143,5 @@
         <image name="Button" width="186" height="52"/>
         <image name="background" width="256" height="256"/>
         <image name="piggy2" width="193" height="171"/>
-        <image name="plus" catalog="system" width="64" height="56"/>
     </resources>
 </document>

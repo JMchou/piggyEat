@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B0AC5A723F64D8500DB9BE1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AC5A623F64D8500DB9BE1 /* Item.swift */; };
 		4B0AC5AA23F87A5900DB9BE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */; };
 		4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A623F3F3BD00469140 /* AppDelegate.swift */; };
 		4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A823F3F3BD00469140 /* SceneDelegate.swift */; };
@@ -15,11 +14,12 @@
 		4BD726AE23F3F3BD00469140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726AC23F3F3BD00469140 /* Main.storyboard */; };
 		4BD726B023F3F3BE00469140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726AF23F3F3BE00469140 /* Assets.xcassets */; };
 		4BD726B323F3F3BE00469140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726B123F3F3BE00469140 /* LaunchScreen.storyboard */; };
-		FF8D04A3EB4AF54D0815579F /* Pods_PiggyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */; };
+		4BFA031B23FBBFE2003D11A7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA031923FBBFE2003D11A7 /* DataModel.xcdatamodeld */; };
+		4BFA031D23FCB185003D11A7 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA031C23FCB185003D11A7 /* Menu.swift */; };
+		62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4B0AC5A623F64D8500DB9BE1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4BD726A323F3F3BD00469140 /* PiggyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A623F3F3BD00469140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +29,9 @@
 		4BD726AF23F3F3BE00469140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BD726B223F3F3BE00469140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BD726B423F3F3BE00469140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFA031A23FBBFE2003D11A7 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		4BFA031C23FCB185003D11A7 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PiggyEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyEat.release.xcconfig"; path = "Target Support Files/Pods-PiggyEat/Pods-PiggyEat.release.xcconfig"; sourceTree = "<group>"; };
 		90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PiggyEat.debug.xcconfig"; path = "Target Support Files/Pods-PiggyEat/Pods-PiggyEat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF8D04A3EB4AF54D0815579F /* Pods_PiggyEat.framework in Frameworks */,
+				62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,14 +54,14 @@
 				90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */,
 				8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		4B0AC5A823F64D9200DB9BE1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4B0AC5A623F64D8500DB9BE1 /* Item.swift */,
+				4BFA031923FBBFE2003D11A7 /* DataModel.xcdatamodeld */,
+				4BFA031C23FCB185003D11A7 /* Menu.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,7 +119,7 @@
 		B040B0EF7962A99F3ABCDAFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6265DE63AB25DCD67D1AEB39 /* Pods_PiggyEat.framework */,
+				69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,7 +135,6 @@
 				4BD7269F23F3F3BD00469140 /* Sources */,
 				4BD726A023F3F3BD00469140 /* Frameworks */,
 				4BD726A123F3F3BD00469140 /* Resources */,
-				61DD402EF758D81A855CE5B8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,23 +214,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		61DD402EF758D81A855CE5B8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PiggyEat/Pods-PiggyEat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -237,8 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B0AC5A723F64D8500DB9BE1 /* Item.swift in Sources */,
 				4B0AC5AA23F87A5900DB9BE1 /* MenuViewController.swift in Sources */,
+				4BFA031D23FCB185003D11A7 /* Menu.swift in Sources */,
+				4BFA031B23FBBFE2003D11A7 /* DataModel.xcdatamodeld in Sources */,
 				4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */,
 				4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */,
 				4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */,
@@ -441,6 +426,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4BFA031923FBBFE2003D11A7 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4BFA031A23FBBFE2003D11A7 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 4BFA031A23FBBFE2003D11A7 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4BD7269B23F3F3BD00469140 /* Project object */;
 }
