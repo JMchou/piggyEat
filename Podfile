@@ -5,7 +5,8 @@ target 'PiggyEat' do
    use_frameworks!
 
   # Pods for PiggyEat
-    
-  #  pod 'RealmSwift'
+  # pod 'RealmSwift'
+  
+  # pod 'SwipeCellKit'
     
 end
