@@ -18,8 +18,22 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-t5-xb5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy1" translatesAutoresizingMaskIntoConstraints="NO" id="AxL-IH-nmG">
+                                <rect key="frame" x="20" y="482" width="217" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="217" id="GRw-gk-8he"/>
+                                    <constraint firstAttribute="height" constant="128" id="VU5-uY-6xk"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy2" translatesAutoresizingMaskIntoConstraints="NO" id="1D5-bX-8qC">
+                                <rect key="frame" x="212" y="702" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="VQU-s5-oF4"/>
+                                    <constraint firstAttribute="width" constant="240" id="cv2-xY-zAo"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-Zg-Zjo">
-                                <rect key="frame" x="114" y="660" width="186" height="52"/>
+                                <rect key="frame" x="114" y="642" width="186" height="52"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <state key="normal" title="Edit Menu" backgroundImage="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -29,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
-                                <rect key="frame" x="114" y="576" width="186" height="52"/>
+                                <rect key="frame" x="114" y="558" width="186" height="52"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <state key="normal" title="Roll" backgroundImage="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,34 +58,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggy2" translatesAutoresizingMaskIntoConstraints="NO" id="Vyt-4X-nUz">
-                                <rect key="frame" x="243" y="739" width="189" height="164"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="PgU-JW-DGL"/>
-                                    <constraint firstAttribute="height" constant="164" id="S7R-n5-rmx"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="MiG-B1-Rf1" secondAttribute="bottom" constant="32" id="13H-hH-47T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdQ-Zg-Zjo" secondAttribute="bottom" constant="150" id="Bcl-Xi-itZ"/>
+                            <constraint firstItem="AxL-IH-nmG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BMj-DG-3uZ"/>
                             <constraint firstItem="ot3-PL-4i5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cs2-rd-6PH"/>
-                            <constraint firstAttribute="bottom" secondItem="Vyt-4X-nUz" secondAttribute="bottom" constant="-7" id="EbJ-EE-Him"/>
                             <constraint firstAttribute="trailing" secondItem="OSZ-t5-xb5" secondAttribute="trailing" id="FnJ-If-TU0"/>
-                            <constraint firstAttribute="trailing" secondItem="Vyt-4X-nUz" secondAttribute="trailing" constant="-18" id="R8O-XT-Z1V"/>
+                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="AxL-IH-nmG" secondAttribute="bottom" constant="32" id="KH7-U0-6A3"/>
                             <constraint firstItem="MiG-B1-Rf1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XSy-lJ-k6M"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f1x-rq-PGU"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hgi-4L-Xdu"/>
+                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="MiG-B1-Rf1" secondAttribute="bottom" constant="32" id="oQg-Hf-KNg"/>
                             <constraint firstAttribute="bottom" secondItem="OSZ-t5-xb5" secondAttribute="bottom" id="ogY-zM-V0y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdQ-Zg-Zjo" secondAttribute="bottom" constant="168" id="p6Q-8H-sgh"/>
+                            <constraint firstAttribute="trailing" secondItem="1D5-bX-8qC" secondAttribute="trailing" constant="-38" id="pm8-Cd-V2V"/>
                             <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2H-tT-599"/>
                             <constraint firstItem="ot3-PL-4i5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="s50-oV-g9m"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1D5-bX-8qC" secondAttribute="bottom" constant="32" id="yH3-ZN-oca"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="PiggyEat" id="Fb7-Yn-fSG"/>
                     <connections>
-                        <outlet property="bottomPigImage" destination="Vyt-4X-nUz" id="uLI-M1-yho"/>
                         <outlet property="foodChoice" destination="ot3-PL-4i5" id="LGO-6C-JLo"/>
                     </connections>
                 </viewController>
@@ -83,21 +91,11 @@
         <scene sceneID="qw0-Rx-baw">
             <objects>
                 <tableViewController id="L3r-XE-gAr" customClass="MenuViewController" customModule="PiggyEat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZO-cr-B04">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZO-cr-B04">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodItem" rowHeight="55" id="XkL-3p-SHE">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XkL-3p-SHE" id="Jxa-pI-Q2Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <outlet property="dataSource" destination="L3r-XE-gAr" id="eTs-mF-2CS"/>
                             <outlet property="delegate" destination="L3r-XE-gAr" id="XoJ-Rq-Oe3"/>
@@ -142,6 +140,7 @@
     <resources>
         <image name="Button" width="186" height="52"/>
         <image name="background" width="256" height="256"/>
-        <image name="piggy2" width="193" height="171"/>
+        <image name="rootScreenPiggy1" width="492" height="407"/>
+        <image name="rootScreenPiggy2" width="504" height="372"/>
     </resources>
 </document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="98" id="KGk-i7-Jjw" customClass="FoodItemCell" customModule="PiggyEat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="339" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="339" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-3f-5pd">
+                        <rect key="frame" x="5" y="5" width="329" height="88"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggy2" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-eV-e2U">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0LZ-ZK-QOg"/>
+                                    <constraint firstAttribute="width" constant="40" id="fEH-MR-tu6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="korean bbq" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-7A-FWq">
+                                <rect key="frame" x="80" y="20" width="204" height="29"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91756415367126465" green="0.55068850517272949" blue="0.74068498611450195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sjy-eV-e2U" firstAttribute="top" secondItem="bPU-3f-5pd" secondAttribute="top" constant="10" id="FqS-hR-rJn"/>
+                            <constraint firstItem="gpn-7A-FWq" firstAttribute="top" secondItem="bPU-3f-5pd" secondAttribute="top" constant="20" id="HOR-Rp-7Yk"/>
+                            <constraint firstAttribute="trailing" secondItem="gpn-7A-FWq" secondAttribute="trailing" constant="45" id="Xxh-3P-1er"/>
+                            <constraint firstItem="gpn-7A-FWq" firstAttribute="leading" secondItem="Sjy-eV-e2U" secondAttribute="trailing" constant="30" id="Zwg-oC-3St"/>
+                            <constraint firstAttribute="bottom" secondItem="Sjy-eV-e2U" secondAttribute="bottom" constant="10" id="fpR-rn-682"/>
+                            <constraint firstItem="Sjy-eV-e2U" firstAttribute="leading" secondItem="bPU-3f-5pd" secondAttribute="leading" constant="10" id="jMm-cR-LJk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bPU-3f-5pd" secondAttribute="bottom" constant="5" id="2n2-CT-dtg"/>
+                    <constraint firstAttribute="trailing" secondItem="bPU-3f-5pd" secondAttribute="trailing" constant="5" id="M4j-iw-Paz"/>
+                    <constraint firstItem="bPU-3f-5pd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="V7V-Ke-7D4"/>
+                    <constraint firstItem="bPU-3f-5pd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="VqM-1b-NO9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgView" destination="bPU-3f-5pd" id="REx-Uj-9Q6"/>
+                <outlet property="imageLabel" destination="Sjy-eV-e2U" id="7LI-A0-Xru"/>
+                <outlet property="nameLabel" destination="gpn-7A-FWq" id="wXf-Q5-dmx"/>
+            </connections>
+            <point key="canvasLocation" x="44.20289855072464" y="119.19642857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="piggy2" width="371" height="307"/>
+    </resources>
+</document>
