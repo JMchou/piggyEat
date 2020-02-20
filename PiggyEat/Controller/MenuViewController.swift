@@ -19,6 +19,9 @@ class MenuViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "FoodItemCell")
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = UIColor.white
         loadData()
     }
     
@@ -31,12 +34,13 @@ class MenuViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodItem", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodItemCell", for: indexPath) as! FoodItemCell
 
         let item = menu.foodArray[indexPath.row]
-        cell.textLabel?.text = item.name
-        cell.textLabel?.textColor = UIColor.black
+        cell.nameLabel.text = item.name
+        cell.imageLabel.image = UIImage(named: "piggy\(Int.random(in: 1...9))")
+        //cell.textLabel?.textColor = UIColor.black
 
         return cell
     }

@@ -16,14 +16,9 @@ class ViewController: UIViewController {
     let menu = Menu.sharedInstance
     
     @IBOutlet weak var foodChoice: UILabel!
-    @IBOutlet weak var bottomPigImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let number = randomNumber(min: 1, max: 9)
-        bottomPigImage.image = UIImage(named: "piggy\(number).png")
-        
         loadData()
     }
     
@@ -36,10 +31,6 @@ class ViewController: UIViewController {
             let position = randomNumber(min: 0, max: maxNumber - 1)
             foodChoice.text = menu.foodArray[position].name
         }
-        
-        let pigNumber = randomNumber(min: 1, max: 9)
-        bottomPigImage.image = UIImage(named: "piggy\(pigNumber).png")
-
     }
 
     private func randomNumber(min: Int, max: Int) -> Int {
@@ -57,9 +48,4 @@ class ViewController: UIViewController {
             print("Error occurred when trying to fetch data. \(error)")
         }
     }
-}
-
-extension ViewController:   UINavigationControllerDelegate {
-    
-    
 }
