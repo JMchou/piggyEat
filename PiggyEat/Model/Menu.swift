@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import CoreData
 
 class Menu {
     
     static let sharedInstance = Menu()
-    
     var foodArray = [Item]()
+    
 }

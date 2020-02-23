@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class FoodItemCell: UITableViewCell {
+class FoodItemCell: SwipeTableViewCell {
 
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var imageLabel: UIImageView!
@@ -25,6 +26,6 @@ class FoodItemCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
+    } 
     
 }
