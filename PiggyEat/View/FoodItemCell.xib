@@ -9,15 +9,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="98" id="KGk-i7-Jjw" customClass="FoodItemCell" customModule="PiggyEat" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="339" height="98"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodItemCell" rowHeight="102" id="KGk-i7-Jjw" customClass="FoodItemCell" customModule="PiggyEat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="345" height="102"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="339" height="98"/>
+                <rect key="frame" x="0.0" y="0.0" width="345" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bPU-3f-5pd">
-                        <rect key="frame" x="5" y="5" width="329" height="88"/>
+                        <rect key="frame" x="5" y="5" width="335" height="88"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggy2" translatesAutoresizingMaskIntoConstraints="NO" id="Sjy-eV-e2U">
                                 <rect key="frame" x="10" y="10" width="40" height="40"/>
@@ -27,13 +27,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="korean bbq" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-7A-FWq">
-                                <rect key="frame" x="80" y="20" width="204" height="29"/>
+                                <rect key="frame" x="80" y="20" width="210" height="29"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.91756415367126465" green="0.55068850517272949" blue="0.74068498611450195" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Sjy-eV-e2U" firstAttribute="top" secondItem="bPU-3f-5pd" secondAttribute="top" constant="10" id="FqS-hR-rJn"/>
                             <constraint firstItem="gpn-7A-FWq" firstAttribute="top" secondItem="bPU-3f-5pd" secondAttribute="top" constant="20" id="HOR-Rp-7Yk"/>
@@ -59,7 +59,7 @@
                 <outlet property="imageLabel" destination="Sjy-eV-e2U" id="7LI-A0-Xru"/>
                 <outlet property="nameLabel" destination="gpn-7A-FWq" id="wXf-Q5-dmx"/>
             </connections>
-            <point key="canvasLocation" x="44.20289855072464" y="119.19642857142857"/>
+            <point key="canvasLocation" x="-269" y="8"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var foodChoice: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -24,13 +25,11 @@ class ViewController: UIViewController {
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
-        var maxNumber = 0
-        
-        if menu.foodArray.count > 0 {
-            maxNumber = menu.foodArray.count
-            let position = randomNumber(min: 0, max: maxNumber - 1)
-            foodChoice.text = menu.foodArray[position].name
+        guard let selectedFood = menu.foodArray.randomElement()?.name else{
+            foodChoice.text = "Empty menu!"
+            return 
         }
+        foodChoice.text = selectedFood
     }
 
     private func randomNumber(min: Int, max: Int) -> Int {

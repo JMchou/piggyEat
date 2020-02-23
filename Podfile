@@ -7,6 +7,6 @@ target 'PiggyEat' do
   # Pods for PiggyEat
   # pod 'RealmSwift'
   
-  # pod 'SwipeCellKit'
+   pod 'SwipeCellKit'
     
 end
