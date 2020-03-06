@@ -59,7 +59,7 @@
                 <outlet property="imageLabel" destination="Sjy-eV-e2U" id="7LI-A0-Xru"/>
                 <outlet property="nameLabel" destination="gpn-7A-FWq" id="wXf-Q5-dmx"/>
             </connections>
-            <point key="canvasLocation" x="-269" y="8"/>
+            <point key="canvasLocation" x="-428" y="-31"/>
         </tableViewCell>
     </objects>
     <resources>
