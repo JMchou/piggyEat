@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
+        menu.loadData(context: context)
     }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
@@ -34,17 +34,5 @@ class ViewController: UIViewController {
 
     private func randomNumber(min: Int, max: Int) -> Int {
         return Int.random(in: min...max)
-    }
-
-    
-    //MARK: - Data Handle
-    
-    func loadData() {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
-        do {
-            menu.foodArray =  try context.fetch(request)
-        } catch {
-            print("Error occurred when trying to fetch data. \(error)")
-        }
     }
 }

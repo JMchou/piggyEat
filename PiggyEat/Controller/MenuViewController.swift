@@ -14,17 +14,15 @@ import SwipeCellKit
 class MenuViewController: UITableViewController {
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
     let menu = Menu.sharedInstance
-    //let foodArray = menu.sharedInstance.foodArray
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "FoodItemCell")
         tableView.separatorStyle = .none
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        loadData()
+        menu.loadData(context: context)
     }
     
     // MARK: - Table view data sources
@@ -63,7 +61,7 @@ class MenuViewController: UITableViewController {
             newItem.date = Date()
             
             self.menu.foodArray.append(newItem)
-            self.saveData()
+            self.menu.saveData(context: self.context)
             self.tableView.reloadData()
         }
 
@@ -77,33 +75,7 @@ class MenuViewController: UITableViewController {
         }))
         present(alert, animated: true, completion: nil)
     }
-
-    //MARK: - Coredata data management
-
-    func saveData() {
-        do {
-            try context.save()
-        } catch {
-            print("Error occurred when trying to save \(error)")
-        }
-    }
-
-    func loadData() {
-        let request : NSFetchRequest<Item> = Item.fetchRequest()
-        do {
-            menu.foodArray =  try context.fetch(request)
-        } catch {
-            print("Error occurred when trying to fetch data. \(error)")
-        }
-    }
-    
-    func deleteData(at location: Int) {
-        context.delete(menu.foodArray[location])
-        menu.foodArray.remove(at: location)
-        saveData()
-    }
 } 
-
 
 //MARK: - SwipeCellKit protocol
 
@@ -114,7 +86,7 @@ extension MenuViewController: SwipeTableViewCellDelegate {
 
         let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
             // handle action by updating model with deletion
-            self.deleteData(at: indexPath.row)
+            self.menu.deleteData(context: self.context, at: indexPath.row)
             self.tableView.reloadData()
         }
         
