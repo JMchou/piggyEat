@@ -11,7 +11,6 @@
 		4B75A73923FE1444005D3128 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75A73723FE1444005D3128 /* FoodItemCell.swift */; };
 		4B75A73A23FE1444005D3128 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B75A73823FE1444005D3128 /* FoodItemCell.xib */; };
 		4B895D152414F4BA008699BE /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D142414F4BA008699BE /* DataViewController.swift */; };
-		4B895D1724172790008699BE /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B895D1624172790008699BE /* SwipeCellKit.framework */; };
 		4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A623F3F3BD00469140 /* AppDelegate.swift */; };
 		4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A823F3F3BD00469140 /* SceneDelegate.swift */; };
 		4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726AA23F3F3BD00469140 /* ViewController.swift */; };
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B895D1724172790008699BE /* SwipeCellKit.framework in Frameworks */,
 				62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
