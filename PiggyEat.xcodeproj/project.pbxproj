@@ -10,6 +10,8 @@
 		4B0AC5AA23F87A5900DB9BE1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */; };
 		4B75A73923FE1444005D3128 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75A73723FE1444005D3128 /* FoodItemCell.swift */; };
 		4B75A73A23FE1444005D3128 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B75A73823FE1444005D3128 /* FoodItemCell.xib */; };
+		4B895D152414F4BA008699BE /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D142414F4BA008699BE /* DataViewController.swift */; };
+		4B895D1724172790008699BE /* SwipeCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B895D1624172790008699BE /* SwipeCellKit.framework */; };
 		4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A623F3F3BD00469140 /* AppDelegate.swift */; };
 		4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A823F3F3BD00469140 /* SceneDelegate.swift */; };
 		4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726AA23F3F3BD00469140 /* ViewController.swift */; };
@@ -25,6 +27,8 @@
 		4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4B75A73723FE1444005D3128 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
 		4B75A73823FE1444005D3128 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
+		4B895D142414F4BA008699BE /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		4B895D1624172790008699BE /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A323F3F3BD00469140 /* PiggyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A623F3F3BD00469140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD726A823F3F3BD00469140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B895D1724172790008699BE /* SwipeCellKit.framework in Frameworks */,
 				62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +80,7 @@
 			children = (
 				4BD726AA23F3F3BD00469140 /* ViewController.swift */,
 				4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */,
+				4B895D142414F4BA008699BE /* DataViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 		B040B0EF7962A99F3ABCDAFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4B895D1624172790008699BE /* SwipeCellKit.framework */,
 				69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */,
 			);
 			name = Frameworks;
@@ -250,6 +257,7 @@
 				4BFA031D23FCB185003D11A7 /* Menu.swift in Sources */,
 				4BFA031B23FBBFE2003D11A7 /* DataModel.xcdatamodeld in Sources */,
 				4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */,
+				4B895D152414F4BA008699BE /* DataViewController.swift in Sources */,
 				4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */,
 				4B75A73923FE1444005D3128 /* FoodItemCell.swift in Sources */,
 				4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */,
