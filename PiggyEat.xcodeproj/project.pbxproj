@@ -11,6 +11,8 @@
 		4B75A73923FE1444005D3128 /* FoodItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B75A73723FE1444005D3128 /* FoodItemCell.swift */; };
 		4B75A73A23FE1444005D3128 /* FoodItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B75A73823FE1444005D3128 /* FoodItemCell.xib */; };
 		4B895D152414F4BA008699BE /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D142414F4BA008699BE /* DataViewController.swift */; };
+		4B895D242418B3B4008699BE /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D222418B3B4008699BE /* AlertViewController.swift */; };
+		4B895D252418B3B4008699BE /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B895D232418B3B4008699BE /* AlertViewController.xib */; };
 		4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A623F3F3BD00469140 /* AppDelegate.swift */; };
 		4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A823F3F3BD00469140 /* SceneDelegate.swift */; };
 		4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726AA23F3F3BD00469140 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		4B75A73823FE1444005D3128 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		4B895D142414F4BA008699BE /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		4B895D1624172790008699BE /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B895D222418B3B4008699BE /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		4B895D232418B3B4008699BE /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		4BD726A323F3F3BD00469140 /* PiggyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A623F3F3BD00469140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD726A823F3F3BD00469140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 				4BD726AA23F3F3BD00469140 /* ViewController.swift */,
 				4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */,
 				4B895D142414F4BA008699BE /* DataViewController.swift */,
+				4B895D222418B3B4008699BE /* AlertViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD726AC23F3F3BD00469140 /* Main.storyboard */,
+				4B895D232418B3B4008699BE /* AlertViewController.xib */,
 				4B75A73723FE1444005D3128 /* FoodItemCell.swift */,
 				4B75A73823FE1444005D3128 /* FoodItemCell.xib */,
 			);
@@ -199,6 +205,7 @@
 				4BD726B323F3F3BE00469140 /* LaunchScreen.storyboard in Resources */,
 				4BD726B023F3F3BE00469140 /* Assets.xcassets in Resources */,
 				4BD726AE23F3F3BD00469140 /* Main.storyboard in Resources */,
+				4B895D252418B3B4008699BE /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +262,7 @@
 				4BFA031D23FCB185003D11A7 /* Menu.swift in Sources */,
 				4BFA031B23FBBFE2003D11A7 /* DataModel.xcdatamodeld in Sources */,
 				4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */,
+				4B895D242418B3B4008699BE /* AlertViewController.swift in Sources */,
 				4B895D152414F4BA008699BE /* DataViewController.swift in Sources */,
 				4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */,
 				4B75A73923FE1444005D3128 /* FoodItemCell.swift in Sources */,
