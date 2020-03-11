@@ -37,5 +37,4 @@ class Menu {
         self.saveData(context: context)
     }
     
-    
 }
