@@ -70,7 +70,7 @@ class MenuViewController: UITableViewController {
             textField = alertTextField
         }
         alert.addAction(action)
-        alert.addAction(UIAlertAction(title: "Delete", style: .cancel, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
         }))
         present(alert, animated: true, completion: nil)

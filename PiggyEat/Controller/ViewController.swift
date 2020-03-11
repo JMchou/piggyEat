@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import PopupDialog
 
 class ViewController: UIViewController {
     
@@ -15,13 +16,14 @@ class ViewController: UIViewController {
     private let pageViewDataSource = ["Breakfast", "Lunch", "Dinner"]
     private var currentViewIndex = 0
     private var pendingViewControllerIndex = 0
+    private var popupDialog: PopupDialog?
     
     private let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
-    let menu = Menu.sharedInstance
+    private let menu = Menu.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCustomAlertView()
         menu.loadData(context: context)
     }
     
@@ -32,8 +34,47 @@ class ViewController: UIViewController {
         //            return
         //        }
         //foodChoice.text = selectedFood
-        print("The current index is \(currentViewIndex)")
+        guard let foodChoice = menu.foodArray.randomElement()?.name else {
+            return
+        }
+        showCustomAlertView(message: foodChoice, animated: true)
     }
+    
+    //MARK: - Custom Alert
+    
+    func configureCustomAlertView() {
+        
+        let dialogAppearance = PopupDialogContainerView.appearance()
+        let overlayAppearance = PopupDialogOverlayView.appearance()
+ 
+        dialogAppearance.backgroundColor = .clear
+        
+        if self.traitCollection.userInterfaceStyle == .dark  {
+            overlayAppearance.color = .black
+        } else {
+            overlayAppearance.color = .white
+        }
+    }
+    
+    func showCustomAlertView(message: String, animated: Bool) {
+        
+        let customVC = AlertViewController(nibName: "AlertViewController", bundle: nil)
+        customVC.delegate = self
+        customVC.displayedText = message
+        // Create the dialog
+        let popup = PopupDialog(viewController: customVC,
+                                buttonAlignment: .horizontal,
+                                transitionStyle: .bounceDown,
+                                tapGestureDismissal: true,
+                                panGestureDismissal: false)
+        
+        popupDialog = popup
+        // Present dialog
+        present(popup, animated: animated, completion: nil)
+    }
+
+    
+    //MARK: - Swipable UI element functions
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toPageViewController" {
@@ -131,4 +172,15 @@ extension ViewController: UIPageViewControllerDelegate, UIPageViewControllerData
         }
     }
     
+}
+
+//MARK: - Custom Alert delegate
+
+extension ViewController: AlertViewControllerDelegate {
+    
+    func alertViewController(dismissIsPressed: Bool) {
+        if dismissIsPressed {
+            popupDialog?.dismiss()
+        }
+    }
 }
