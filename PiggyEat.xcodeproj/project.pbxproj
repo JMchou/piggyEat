@@ -89,6 +89,7 @@
 				4B895D142414F4BA008699BE /* DataViewController.swift */,
 				4B895D222418B3B4008699BE /* AlertViewController.swift */,
 				4B5ADC2F241B0AFD00F86627 /* AddMenuViewController.swift */,
+				4B75A73723FE1444005D3128 /* FoodItemCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -96,7 +97,6 @@
 		4B454A8923F5356E00D1D08E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4B75A73723FE1444005D3128 /* FoodItemCell.swift */,
 				4BD726AC23F3F3BD00469140 /* Main.storyboard */,
 				4B895D232418B3B4008699BE /* AlertViewController.xib */,
 				4B5ADC30241B0AFD00F86627 /* AddMenuViewController.xib */,

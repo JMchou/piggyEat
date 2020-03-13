@@ -24,7 +24,7 @@ class MenuViewController: UITableViewController {
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "FoodItemCell")
         tableView.separatorStyle = .none
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        menu.loadData(context: context)
+        menu.loadData(context: context, predicate: nil)
     }
     
     // MARK: - Table view data sources
@@ -52,34 +52,6 @@ class MenuViewController: UITableViewController {
     //MARK: - Add New items
     
     @IBAction func addbuttonPressed(_ sender: UIBarButtonItem) {
-        
-        //        var textField = UITextField()
-        //
-        //        let alert = UIAlertController(title: "Add new food item", message: "", preferredStyle: .alert)
-        //
-        //        let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
-        //
-        //            let newItem = Item(context: self.context)
-        //
-        //            newItem.name = textField.text!
-        //            newItem.date = Date()
-        //            newItem.imageNumber = Int16(Int.random(in: 1...9))
-        //
-        //            self.menu.foodArray.append(newItem)
-        //            self.menu.saveData(context: self.context)
-        //            self.tableView.reloadData()
-        //        }
-        //
-        //        alert.addTextField { (alertTextField) in
-        //            alertTextField.placeholder = "Add a food option"
-        //            textField = alertTextField
-        //        }
-        //        alert.addAction(action)
-        //        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-        //            alert.dismiss(animated: true, completion: nil)
-        //        }))
-        //        present(alert, animated: true, completion: nil)
-        
         showCustomAlertView(animated: true)
     }
     
