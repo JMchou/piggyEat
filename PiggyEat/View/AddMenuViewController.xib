@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddMenuViewController" customModule="PiggyEat" customModuleProvider="target">
+            <connections>
+                <outlet property="breakfastButton" destination="hJh-vF-4hq" id="M3Q-no-Zsn"/>
+                <outlet property="dinnerButton" destination="rUR-lA-xJ5" id="w8T-0j-erO"/>
+                <outlet property="enterTextField" destination="CYW-5P-zH9" id="AHk-8k-8hJ"/>
+                <outlet property="lunchButton" destination="zad-mi-jPj" id="aTp-RO-XzW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="528" height="304"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duV-5c-5Hd">
+                    <rect key="frame" x="0.0" y="0.0" width="528" height="304"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddViewBackground" translatesAutoresizingMaskIntoConstraints="NO" id="tkA-dU-2fk">
+                            <rect key="frame" x="64" y="40" width="400" height="243"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="243" id="c3U-Ug-Wf3"/>
+                                <constraint firstAttribute="width" constant="400" id="hdU-6I-aZI"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AddMenuPiggy" translatesAutoresizingMaskIntoConstraints="NO" id="XIl-33-h1j">
+                            <rect key="frame" x="194.5" y="6" width="139" height="89"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="139" id="Oan-gj-No8"/>
+                                <constraint firstAttribute="height" constant="89" id="XbZ-Y4-AdG"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJh-vF-4hq" userLabel="BreakfastButton">
+                            <rect key="frame" x="173" y="187" width="44" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="VzD-NU-B17"/>
+                                <constraint firstAttribute="width" constant="44" id="hOA-j7-xuV"/>
+                            </constraints>
+                            <state key="normal" title="Breakfast" image="uncheck"/>
+                            <state key="selected" title="Breakfast" image="check"/>
+                            <connections>
+                                <action selector="checkBoxPressed:" destination="-1" eventType="touchUpInside" id="aX3-fg-81n"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zad-mi-jPj" userLabel="LunchButton">
+                            <rect key="frame" x="242" y="187" width="44" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="3xt-5Q-2c1"/>
+                                <constraint firstAttribute="width" constant="44" id="T10-wu-bFx"/>
+                            </constraints>
+                            <state key="normal" title="Lunch" image="uncheck"/>
+                            <state key="selected" title="Lunch" image="check"/>
+                            <connections>
+                                <action selector="checkBoxPressed:" destination="-1" eventType="touchUpInside" id="DRq-VH-Ejr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUR-lA-xJ5" userLabel="DinnerButton">
+                            <rect key="frame" x="311" y="187" width="44" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="L4u-BE-98h"/>
+                                <constraint firstAttribute="height" constant="41" id="aFJ-Ag-2GV"/>
+                            </constraints>
+                            <state key="normal" title="Dinner" image="uncheck"/>
+                            <state key="selected" title="Dinner" image="check"/>
+                            <connections>
+                                <action selector="checkBoxPressed:" destination="-1" eventType="touchUpInside" id="M1r-ng-01R"/>
+                            </connections>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your favorite food!" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CYW-5P-zH9">
+                            <rect key="frame" x="176" y="110" width="176" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="176" id="6DQ-Zb-abr"/>
+                                <constraint firstAttribute="height" constant="34" id="YY4-Fz-FdU"/>
+                            </constraints>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fU-lL-79a">
+                            <rect key="frame" x="167" y="160" width="57" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="2yG-lN-e3p"/>
+                                <constraint firstAttribute="height" constant="19" id="p9T-bS-Euz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnW-Ac-mpy">
+                            <rect key="frame" x="247" y="160" width="34" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="34" id="J1X-oq-eY6"/>
+                                <constraint firstAttribute="height" constant="19" id="upo-lz-kSf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-Na-zvb">
+                            <rect key="frame" x="314" y="160" width="38" height="19"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="38" id="Ngy-s8-NOb"/>
+                                <constraint firstAttribute="height" constant="19" id="pyY-Ci-peq"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="914-cL-yEx">
+                            <rect key="frame" x="182.5" y="236" width="163" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="163" id="Eqw-Er-qJu"/>
+                                <constraint firstAttribute="height" constant="33" id="Vtn-bD-Jvb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                            <state key="normal" title="Add to Menu" backgroundImage="Rectangle">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="mainButtonPressed:" destination="-1" eventType="touchUpInside" id="CYm-84-V7N"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="XIl-33-h1j" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="1FW-4n-6OE"/>
+                        <constraint firstItem="yhG-Na-zvb" firstAttribute="leading" secondItem="bnW-Ac-mpy" secondAttribute="trailing" constant="33" id="4VP-d6-aoR"/>
+                        <constraint firstAttribute="height" constant="304" id="4cp-Bm-7TG"/>
+                        <constraint firstItem="zad-mi-jPj" firstAttribute="leading" secondItem="hJh-vF-4hq" secondAttribute="trailing" constant="25" id="79O-Wt-KyG"/>
+                        <constraint firstItem="hJh-vF-4hq" firstAttribute="top" secondItem="8fU-lL-79a" secondAttribute="bottom" constant="8" id="DVy-4b-dfo"/>
+                        <constraint firstItem="bnW-Ac-mpy" firstAttribute="top" secondItem="CYW-5P-zH9" secondAttribute="bottom" constant="16" id="FtI-Gt-fOc"/>
+                        <constraint firstItem="CYW-5P-zH9" firstAttribute="top" secondItem="XIl-33-h1j" secondAttribute="bottom" constant="15" id="G9z-l1-zSK"/>
+                        <constraint firstItem="bnW-Ac-mpy" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="GX9-Zp-cJZ"/>
+                        <constraint firstItem="yhG-Na-zvb" firstAttribute="top" secondItem="CYW-5P-zH9" secondAttribute="bottom" constant="16" id="HM5-NP-TsY"/>
+                        <constraint firstItem="CYW-5P-zH9" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="KGW-qQ-34u"/>
+                        <constraint firstItem="bnW-Ac-mpy" firstAttribute="leading" secondItem="8fU-lL-79a" secondAttribute="trailing" constant="23" id="NKZ-fr-JuX"/>
+                        <constraint firstItem="914-cL-yEx" firstAttribute="top" secondItem="hJh-vF-4hq" secondAttribute="bottom" constant="8" id="VhK-Mh-keJ"/>
+                        <constraint firstItem="tkA-dU-2fk" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="XlP-u7-nbS"/>
+                        <constraint firstItem="rUR-lA-xJ5" firstAttribute="leading" secondItem="zad-mi-jPj" secondAttribute="trailing" constant="25" id="aDF-Cd-LH4"/>
+                        <constraint firstAttribute="bottom" secondItem="XIl-33-h1j" secondAttribute="bottom" constant="209" id="fCy-74-O00"/>
+                        <constraint firstItem="rUR-lA-xJ5" firstAttribute="top" secondItem="yhG-Na-zvb" secondAttribute="bottom" constant="8" id="giA-ER-gY8"/>
+                        <constraint firstItem="zad-mi-jPj" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="i1G-HQ-39R"/>
+                        <constraint firstItem="8fU-lL-79a" firstAttribute="top" secondItem="CYW-5P-zH9" secondAttribute="bottom" constant="16" id="kGn-31-PdL"/>
+                        <constraint firstItem="zad-mi-jPj" firstAttribute="top" secondItem="bnW-Ac-mpy" secondAttribute="bottom" constant="8" id="m9p-8r-zac"/>
+                        <constraint firstItem="914-cL-yEx" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="ofZ-U6-tua"/>
+                        <constraint firstAttribute="bottom" secondItem="tkA-dU-2fk" secondAttribute="bottom" constant="21" id="pGb-HV-U4R"/>
+                        <constraint firstItem="914-cL-yEx" firstAttribute="centerX" secondItem="duV-5c-5Hd" secondAttribute="centerX" id="pzD-yw-gmA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="duV-5c-5Hd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="g1n-ht-sfT"/>
+                <constraint firstAttribute="trailing" secondItem="duV-5c-5Hd" secondAttribute="trailing" id="htI-KV-ldg"/>
+                <constraint firstAttribute="bottom" secondItem="duV-5c-5Hd" secondAttribute="bottom" id="xVI-VH-8HA"/>
+                <constraint firstItem="duV-5c-5Hd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="zUJ-oB-hdK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="74" y="-8"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="AddMenuPiggy" width="139" height="125"/>
+        <image name="AddViewBackground" width="400" height="384"/>
+        <image name="Rectangle" width="122" height="24"/>
+        <image name="check" width="70" height="66"/>
+        <image name="uncheck" width="70" height="66"/>
+    </resources>
+</document>
