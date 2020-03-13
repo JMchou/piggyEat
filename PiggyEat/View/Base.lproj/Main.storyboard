@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="evb-s5-u6A">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,14 +19,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy1" translatesAutoresizingMaskIntoConstraints="NO" id="AxL-IH-nmG">
-                                <rect key="frame" x="20" y="482" width="217" height="128"/>
+                                <rect key="frame" x="20" y="494" width="217" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="217" id="GRw-gk-8he"/>
                                     <constraint firstAttribute="height" constant="128" id="VU5-uY-6xk"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy2" translatesAutoresizingMaskIntoConstraints="NO" id="1D5-bX-8qC">
-                                <rect key="frame" x="212" y="702" width="240" height="128"/>
+                                <rect key="frame" x="212" y="699" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="VQU-s5-oF4"/>
                                     <constraint firstAttribute="width" constant="240" id="cv2-xY-zAo"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
-                                <rect key="frame" x="114" y="558" width="186" height="52"/>
+                                <rect key="frame" x="114" y="570" width="186" height="52"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
                                 <state key="normal" title="Roll" backgroundImage="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7b-eQ-YEq">
-                                <rect key="frame" x="0.0" y="122" width="414" height="315"/>
+                                <rect key="frame" x="0.0" y="108" width="414" height="356"/>
                                 <connections>
                                     <segue destination="1cy-Mn-FYK" kind="embed" identifier="toPageViewController" id="p44-Mh-f9d"/>
                                 </connections>
@@ -64,19 +64,19 @@
                             <constraint firstItem="AxL-IH-nmG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BMj-DG-3uZ"/>
                             <constraint firstAttribute="trailing" secondItem="OSZ-t5-xb5" secondAttribute="trailing" id="FnJ-If-TU0"/>
                             <constraint firstItem="A7b-eQ-YEq" firstAttribute="trailing" secondItem="OSZ-t5-xb5" secondAttribute="trailing" id="H6C-4q-v4H"/>
-                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="AxL-IH-nmG" secondAttribute="bottom" constant="32" id="KH7-U0-6A3"/>
+                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="AxL-IH-nmG" secondAttribute="bottom" constant="20" id="KH7-U0-6A3"/>
                             <constraint firstItem="A7b-eQ-YEq" firstAttribute="leading" secondItem="OSZ-t5-xb5" secondAttribute="leading" id="XQZ-dX-ngo"/>
                             <constraint firstItem="MiG-B1-Rf1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XSy-lJ-k6M"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f1x-rq-PGU"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hgi-4L-Xdu"/>
-                            <constraint firstItem="AxL-IH-nmG" firstAttribute="top" secondItem="A7b-eQ-YEq" secondAttribute="bottom" constant="45" id="irM-zq-gUG"/>
-                            <constraint firstItem="A7b-eQ-YEq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="neK-Fn-Hf3"/>
-                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="MiG-B1-Rf1" secondAttribute="bottom" constant="32" id="oQg-Hf-KNg"/>
+                            <constraint firstItem="AxL-IH-nmG" firstAttribute="top" secondItem="A7b-eQ-YEq" secondAttribute="bottom" constant="30" id="irM-zq-gUG"/>
+                            <constraint firstItem="A7b-eQ-YEq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="neK-Fn-Hf3"/>
+                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="MiG-B1-Rf1" secondAttribute="bottom" constant="20" id="oQg-Hf-KNg"/>
                             <constraint firstAttribute="bottom" secondItem="OSZ-t5-xb5" secondAttribute="bottom" id="ogY-zM-V0y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdQ-Zg-Zjo" secondAttribute="bottom" constant="168" id="p6Q-8H-sgh"/>
                             <constraint firstAttribute="trailing" secondItem="1D5-bX-8qC" secondAttribute="trailing" constant="-38" id="pm8-Cd-V2V"/>
                             <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2H-tT-599"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1D5-bX-8qC" secondAttribute="bottom" constant="32" id="yH3-ZN-oca"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1D5-bX-8qC" secondAttribute="bottom" constant="35" id="yH3-ZN-oca"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1040.8" y="138.17733990147784"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="qw0-Rx-baw">
@@ -128,8 +128,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-o7-tzJ">
-                                <rect key="frame" x="45" y="311" width="325" height="301"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-o7-tzJ">
+                                <rect key="frame" x="75.666666666666686" y="344.66666666666669" width="263" height="207.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="pPG-5X-vZP"/>
+                                    <constraint firstAttribute="width" constant="263" id="tJQ-Sr-8sd"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -145,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JcW-i6-Js8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.8550724637682" y="847.76785714285711"/>
+            <point key="canvasLocation" x="1888.8" y="847.53694581280797"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yye-Ox-NyQ">
@@ -157,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.7118496192893401" green="0.47437361177699888" blue="0.45004671479518965" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="23"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
