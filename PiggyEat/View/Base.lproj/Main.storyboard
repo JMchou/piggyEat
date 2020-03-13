@@ -39,7 +39,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="L3r-XE-gAr" kind="show" id="H6P-k7-Svh"/>
+                                    <segue destination="dcD-Py-51s" kind="show" id="gRP-y9-vDU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
@@ -87,30 +87,58 @@
             <point key="canvasLocation" x="1040.8" y="138.17733990147784"/>
         </scene>
         <!--Menu View Controller-->
-        <scene sceneID="qw0-Rx-baw">
+        <scene sceneID="t9Z-OY-tdw">
             <objects>
-                <tableViewController id="L3r-XE-gAr" customClass="MenuViewController" customModule="PiggyEat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZO-cr-B04">
+                <viewController id="dcD-Py-51s" customClass="MenuViewController" customModule="PiggyEat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kQL-9E-t5Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.54901960780000003" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <connections>
-                            <outlet property="dataSource" destination="L3r-XE-gAr" id="eTs-mF-2CS"/>
-                            <outlet property="delegate" destination="L3r-XE-gAr" id="XoJ-Rq-Oe3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="a5d-tA-wer">
-                        <barButtonItem key="rightBarButtonItem" title="Add new food" id="Zkd-tS-0aS">
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YoO-Sw-LdJ">
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0np-Mp-etR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="32"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Breakfast"/>
+                                    <segment title="Lunch"/>
+                                    <segment title="Dinner"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="dcD-Py-51s" eventType="valueChanged" id="ZRG-uX-uH1"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YoO-Sw-LdJ" firstAttribute="leading" secondItem="BMN-fc-nK4" secondAttribute="leading" id="0Nr-mo-PRb"/>
+                            <constraint firstItem="0np-Mp-etR" firstAttribute="leading" secondItem="BMN-fc-nK4" secondAttribute="leading" id="7k8-Ls-axQ"/>
+                            <constraint firstItem="YoO-Sw-LdJ" firstAttribute="top" secondItem="0np-Mp-etR" secondAttribute="bottom" id="G1h-w5-anp"/>
+                            <constraint firstItem="BMN-fc-nK4" firstAttribute="trailing" secondItem="0np-Mp-etR" secondAttribute="trailing" id="XDm-tm-mq1"/>
+                            <constraint firstAttribute="bottom" secondItem="YoO-Sw-LdJ" secondAttribute="bottom" id="eg5-fC-UfH"/>
+                            <constraint firstItem="0np-Mp-etR" firstAttribute="top" secondItem="BMN-fc-nK4" secondAttribute="top" id="g5S-ba-JOR"/>
+                            <constraint firstItem="YoO-Sw-LdJ" firstAttribute="trailing" secondItem="BMN-fc-nK4" secondAttribute="trailing" id="xzi-JX-ubT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BMN-fc-nK4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XUl-re-i4M">
+                        <barButtonItem key="rightBarButtonItem" title="Add new item" id="ZAV-kM-9RE">
                             <connections>
-                                <action selector="addbuttonPressed:" destination="L3r-XE-gAr" id="abZ-CX-G4b"/>
+                                <action selector="addbuttonPressed:" destination="dcD-Py-51s" id="gub-pd-95o"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="K5f-Rv-DzQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="0np-Mp-etR" id="IYT-VV-2pc"/>
+                        <outlet property="tableView" destination="YoO-Sw-LdJ" id="jwz-sR-zoP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfp-St-IjQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889.8550724637682" y="138.61607142857142"/>
+            <point key="canvasLocation" x="1866.6666666666667" y="138.61607142857142"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="a3T-Er-JgK">

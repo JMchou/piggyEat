@@ -12,7 +12,10 @@ import CoreData
 import SwipeCellKit
 import PopupDialog
 
-class MenuViewController: UITableViewController {
+class MenuViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let menu = Menu.sharedInstance
@@ -20,33 +23,15 @@ class MenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.delegate = self
         
         tableView.register(UINib(nibName: "FoodItemCell", bundle: nil), forCellReuseIdentifier: "FoodItemCell")
         tableView.separatorStyle = .none
         tableView.backgroundView = UIImageView(image: UIImage(named: "background"))
-        menu.loadData(context: context, predicate: nil)
-    }
-    
-    // MARK: - Table view data sources
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return menu.foodArray.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodItemCell", for: indexPath) as! FoodItemCell
-        cell.delegate = self
-        
-        let item = menu.foodArray[indexPath.row]
-        cell.nameLabel.text = item.name
-        
-        let image = UIImage(named: "piggy\(Int(item.imageNumber))")
-        cell.imageLabel.image = image
-        //cell.textLabel?.textColor = UIColor.black
-        
-        return cell
+        let predicate = selectMealType()
+        menu.loadData(context: context, predicate: predicate)
     }
     
     //MARK: - Add New items
@@ -63,9 +48,9 @@ class MenuViewController: UITableViewController {
         dialogAppearance.backgroundColor = .clear
         
         if self.traitCollection.userInterfaceStyle == .dark  {
-            overlayAppearance.color = .black
+            overlayAppearance.color = .systemPink
         } else {
-            overlayAppearance.color = .white
+            overlayAppearance.color = .systemPink
         }
     }
     
@@ -83,7 +68,35 @@ class MenuViewController: UITableViewController {
         popupDialog = popup
         present(popup, animated: animated, completion: nil)
     }
-} 
+    
+    //MARK: - Display food of selected meal type
+    
+    @IBAction func segmentedControlPressed(_ sender: UISegmentedControl) {
+        
+        let predicate = selectMealType()
+        menu.loadData(context: context, predicate: predicate)
+        tableView.reloadData()
+    }
+    
+    func selectMealType() -> NSPredicate? {
+        
+        var predicate: NSPredicate?
+        switch segmentControl.selectedSegmentIndex {
+        case 1:
+            predicate = NSPredicate(format: "isBreakfast == YES")
+        case 2:
+            predicate = NSPredicate(format: "isLunch == YES")
+        case 3:
+            predicate = NSPredicate(format: "isDinner == YES")
+        default:
+            return nil
+        }
+        
+        return predicate
+    }
+    
+}
+
 
 //MARK: - SwipeCellKit protocol
 
@@ -100,8 +113,17 @@ extension MenuViewController: SwipeTableViewCellDelegate {
         
         // customize the action appearance
         deleteAction.image = UIImage(systemName: "trash.fill")
+        deleteAction.backgroundColor = .clear
+        
         
         return [deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.backgroundColor = .clear
+        return options
+        
     }
     
 }
@@ -130,11 +152,37 @@ extension MenuViewController: AddMenuViewControllerDelegate {
                 }
             }
             
-            self.menu.foodArray.append(newItem)
+            let prediate = selectMealType()
             self.menu.saveData(context: self.context)
+            self.menu.loadData(context: context, predicate: prediate)
             self.popupDialog?.dismiss()
             self.tableView.reloadData()
         }
+    }
+}
+
+//MARK: - TableView data source
+
+extension MenuViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return menu.foodArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FoodItemCell", for: indexPath) as! FoodItemCell
+        cell.delegate = self
+        
+        let item = menu.foodArray[indexPath.row]
+        cell.nameLabel.text = item.name
+        
+        let image = UIImage(named: "piggy\(Int(item.imageNumber))")
+        cell.imageLabel.image = image
+        //cell.textLabel?.textColor = UIColor.black
+        
+        return cell
     }
     
 }
