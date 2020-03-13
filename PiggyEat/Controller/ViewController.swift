@@ -24,19 +24,28 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCustomAlertView()
-        menu.loadData(context: context)
+//        menu.loadData(context: context, predicate: nil)
 //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
         
-        //        guard let selectedFood = menu.foodArray.randomElement()?.name else{
-        //            //foodChoice.text = "Empty menu!"
-        //            return
-        //        }
-        //foodChoice.text = selectedFood
+        var predicate: NSPredicate? = nil
+        switch currentViewIndex {
+        case 0:
+            predicate = NSPredicate(format: "isBreakfast == YES")
+        case 1:
+            predicate = NSPredicate(format: "isLunch == YES")
+        case 2:
+            predicate = NSPredicate(format: "isDinner == YES")
+        default:
+            return
+        }
+
+        menu.loadData(context: context, predicate: predicate)
+        
         guard let foodChoice = menu.foodArray.randomElement()?.name else {
-            let message = "Add your favorite food!"
+            let message = "Empty menu for \(pageViewDataSource[currentViewIndex])"
             showCustomAlertView(message: message, animated: true)
             return
         }

@@ -22,8 +22,9 @@ class Menu {
         }
     }
     
-    func loadData(context: NSManagedObjectContext) {
+    func loadData(context: NSManagedObjectContext, predicate: NSPredicate?) {
         let request : NSFetchRequest<Item> = Item.fetchRequest()
+        request.predicate = predicate
         do {
             self.foodArray =  try context.fetch(request)
         } catch {
