@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         configureCustomAlertView()
         menu.loadData(context: context)
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
     }
     
     @IBAction func rollButtonPressed(_ sender: UIButton) {
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         //        }
         //foodChoice.text = selectedFood
         guard let foodChoice = menu.foodArray.randomElement()?.name else {
+            let message = "Add your favorite food!"
+            showCustomAlertView(message: message, animated: true)
             return
         }
         showCustomAlertView(message: foodChoice, animated: true)
@@ -42,7 +45,7 @@ class ViewController: UIViewController {
     
     //MARK: - Custom Alert
     
-    func configureCustomAlertView() {
+    private func configureCustomAlertView() {
         
         let dialogAppearance = PopupDialogContainerView.appearance()
         let overlayAppearance = PopupDialogOverlayView.appearance()
@@ -56,7 +59,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func showCustomAlertView(message: String, animated: Bool) {
+    private func showCustomAlertView(message: String, animated: Bool) {
         
         let customVC = AlertViewController(nibName: "AlertViewController", bundle: nil)
         customVC.delegate = self
