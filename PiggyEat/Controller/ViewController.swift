@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         menu.loadData(context: context, predicate: predicate)
         
         guard let foodChoice = menu.foodArray.randomElement()?.name else {
-            let message = "Empty menu for \(pageViewDataSource[currentViewIndex])"
+            let message = "Your \(pageViewDataSource[currentViewIndex])'s menu is empty!"
             showCustomAlertView(message: message, animated: true)
             return
         }

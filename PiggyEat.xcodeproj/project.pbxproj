@@ -15,6 +15,8 @@
 		4B895D152414F4BA008699BE /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D142414F4BA008699BE /* DataViewController.swift */; };
 		4B895D242418B3B4008699BE /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B895D222418B3B4008699BE /* AlertViewController.swift */; };
 		4B895D252418B3B4008699BE /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B895D232418B3B4008699BE /* AlertViewController.xib */; };
+		4BB07146241D9D7C00AD335E /* Pods_PiggyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */; };
+		4BB07147241D9D7C00AD335E /* Pods_PiggyEat.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4BD726A723F3F3BD00469140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A623F3F3BD00469140 /* AppDelegate.swift */; };
 		4BD726A923F3F3BD00469140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726A823F3F3BD00469140 /* SceneDelegate.swift */; };
 		4BD726AB23F3F3BD00469140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD726AA23F3F3BD00469140 /* ViewController.swift */; };
@@ -23,19 +25,34 @@
 		4BD726B323F3F3BE00469140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BD726B123F3F3BE00469140 /* LaunchScreen.storyboard */; };
 		4BFA031B23FBBFE2003D11A7 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA031923FBBFE2003D11A7 /* DataModel.xcdatamodeld */; };
 		4BFA031D23FCB185003D11A7 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA031C23FCB185003D11A7 /* Menu.swift */; };
-		62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4BB07148241D9D7C00AD335E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4BB07147241D9D7C00AD335E /* Pods_PiggyEat.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B0AC5A923F87A5900DB9BE1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4B5ADC2F241B0AFD00F86627 /* AddMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMenuViewController.swift; sourceTree = "<group>"; };
 		4B5ADC30241B0AFD00F86627 /* AddMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMenuViewController.xib; sourceTree = "<group>"; };
+		4B5ADC33241D9C7700F86627 /* PopupDialog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PopupDialog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B5ADC34241D9C7700F86627 /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B75A73723FE1444005D3128 /* FoodItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCell.swift; sourceTree = "<group>"; };
 		4B75A73823FE1444005D3128 /* FoodItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCell.xib; sourceTree = "<group>"; };
 		4B895D142414F4BA008699BE /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
-		4B895D1624172790008699BE /* SwipeCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwipeCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B895D222418B3B4008699BE /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4B895D232418B3B4008699BE /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		4BB07149241D9DF500AD335E /* DynamicBlurView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DynamicBlurView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A323F3F3BD00469140 /* PiggyEat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiggyEat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BD726A623F3F3BD00469140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BD726A823F3F3BD00469140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62320F5998A10D0C3E7067EB /* Pods_PiggyEat.framework in Frameworks */,
+				4BB07146241D9D7C00AD335E /* Pods_PiggyEat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +158,9 @@
 		B040B0EF7962A99F3ABCDAFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B895D1624172790008699BE /* SwipeCellKit.framework */,
+				4BB07149241D9DF500AD335E /* DynamicBlurView.framework */,
+				4B5ADC33241D9C7700F86627 /* PopupDialog.framework */,
+				4B5ADC34241D9C7700F86627 /* SwipeCellKit.framework */,
 				69C7C09966861BE3907DAB69 /* Pods_PiggyEat.framework */,
 			);
 			name = Frameworks;
@@ -159,6 +178,7 @@
 				4BD726A023F3F3BD00469140 /* Frameworks */,
 				4BD726A123F3F3BD00469140 /* Resources */,
 				B302F692357531B7322D116A /* [CP] Embed Pods Frameworks */,
+				4BB07148241D9D7C00AD335E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,15 +439,18 @@
 			baseConfigurationReference = 90C7BFECF75B68965D08CEFE /* Pods-PiggyEat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5T84VHY5G4;
 				INFOPLIST_FILE = PiggyEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiamingzhou.PiggyEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = PiggyEat;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -438,15 +461,18 @@
 			baseConfigurationReference = 8F50FFC89CE5EF3E31FC4A58 /* Pods-PiggyEat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 5T84VHY5G4;
 				INFOPLIST_FILE = PiggyEat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiamingzhou.PiggyEat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = PiggyEat;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

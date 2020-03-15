@@ -18,33 +18,44 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-gH-ohh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoadingPiggy" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-Qm-De6">
-                                <rect key="frame" x="32" y="273" width="350" height="350"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingPage_piggy" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-Qm-De6">
+                                <rect key="frame" x="32" y="362" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="350" id="XPF-u7-3nh"/>
                                     <constraint firstAttribute="width" constant="350" id="ejj-5O-JFT"/>
                                 </constraints>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-AR-YcO">
+                                <rect key="frame" x="59.666666666666657" y="70" width="295" height="159"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="159" id="ASo-z7-4gz"/>
+                                    <constraint firstAttribute="width" constant="295" id="s5V-vG-VvF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="sK9-Qm-De6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Vq-9A-cvE"/>
+                            <constraint firstItem="fe7-AR-YcO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="AdD-1u-Ymi"/>
                             <constraint firstAttribute="trailing" secondItem="TfG-gH-ohh" secondAttribute="trailing" id="IKv-42-acH"/>
                             <constraint firstItem="TfG-gH-ohh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JEe-Sm-QEI"/>
-                            <constraint firstItem="sK9-Qm-De6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="M2R-f2-zVB"/>
                             <constraint firstAttribute="bottom" secondItem="TfG-gH-ohh" secondAttribute="bottom" id="MIX-Kx-M9k"/>
-                            <constraint firstItem="sK9-Qm-De6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="f2Y-hu-peS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sK9-Qm-De6" secondAttribute="bottom" constant="150" id="PWC-Ag-KBb"/>
+                            <constraint firstItem="fe7-AR-YcO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q8k-t3-XQQ"/>
                             <constraint firstItem="TfG-gH-ohh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="myy-aW-drk"/>
+                            <constraint firstItem="fe7-AR-YcO" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oA6-pS-4C1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-803" y="236"/>
+            <point key="canvasLocation" x="-123" y="222"/>
         </scene>
     </scenes>
     <resources>
-        <image name="LoadingPiggy" width="866" height="789"/>
+        <image name="Logo" width="2773" height="626"/>
         <image name="background" width="256" height="256"/>
+        <image name="loadingPage_piggy" width="1207" height="1500"/>
     </resources>
 </document>

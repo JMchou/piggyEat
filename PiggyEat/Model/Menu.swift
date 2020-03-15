@@ -25,6 +25,7 @@ class Menu {
     func loadData(context: NSManagedObjectContext, predicate: NSPredicate?) {
         let request : NSFetchRequest<Item> = Item.fetchRequest()
         request.predicate = predicate
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
         do {
             self.foodArray =  try context.fetch(request)
         } catch {
