@@ -7,7 +7,8 @@ This app randomly suggests a choice of food from the stored list entered by the 
 
 ## Technology Used:
 * Coredata for persisting data
-* Cocoapod 
+* Cocoapod
+* Storyboard
 
 ## Demo:
 
