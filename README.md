@@ -4,7 +4,10 @@ This app randomly suggests a choice of food from the stored list entered by the 
 ## Technology Used:
 * Coredata for persisting data
 
-## Screenshots:
+## Demo:
+
+Demo | Add Item | Delete Item
+
 
 
 
