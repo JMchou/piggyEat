@@ -7,7 +7,8 @@ This app randomly suggests a choice of food from the stored list entered by the 
 ## Demo:
 
 Demo | Add Item | Delete Item
-
+:-------------------------:|:-------------------------:|:-------------------------:
+![](/Demo/Demo1.gif)  |  ![](/Demo/Demo2.gif) | ![](/Demo/Demo3.gif)
 
 
 
