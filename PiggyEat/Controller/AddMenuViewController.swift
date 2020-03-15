@@ -56,19 +56,19 @@ class AddMenuViewController: UIViewController {
     @IBAction func mainButtonPressed(_ sender: UIButton) {
         
         for value in mealType.values {
-            if !value {
-                return
-            }
+            if value {
+                
+                guard let textFieldText = enterTextField.text else {
+                    return
+                }
+                
+                guard textFieldText != "" else {
+                    return
+                }
+                delegate?.addMenuViewController(mainButtonIsPressed: true, foodName: textFieldText, selectedMealType: mealType)
+                return 
+            } 
         }
-        
-        guard let textFieldText = enterTextField.text else {
-            return
-        }
-        
-        guard textFieldText != "" else {
-            return
-        }
-        delegate?.addMenuViewController(mainButtonIsPressed: true, foodName: textFieldText, selectedMealType: mealType)
     }
     
 }
