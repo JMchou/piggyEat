@@ -18,65 +18,49 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-t5-xb5">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy1" translatesAutoresizingMaskIntoConstraints="NO" id="AxL-IH-nmG">
-                                <rect key="frame" x="20" y="494" width="217" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="217" id="GRw-gk-8he"/>
-                                    <constraint firstAttribute="height" constant="128" id="VU5-uY-6xk"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rootScreenPiggy2" translatesAutoresizingMaskIntoConstraints="NO" id="1D5-bX-8qC">
-                                <rect key="frame" x="212" y="699" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="VQU-s5-oF4"/>
-                                    <constraint firstAttribute="width" constant="240" id="cv2-xY-zAo"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-Zg-Zjo">
-                                <rect key="frame" x="114" y="642" width="186" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdQ-Zg-Zjo">
+                                <rect key="frame" x="76" y="730" width="262" height="52"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
-                                <state key="normal" title="Edit Menu" backgroundImage="Button">
+                                <state key="normal" title="Edit Menu" backgroundImage="button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="dcD-Py-51s" kind="show" id="gRP-y9-vDU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
-                                <rect key="frame" x="114" y="570" width="186" height="52"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7b-eQ-YEq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="380" id="gy5-yp-qZM"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="1cy-Mn-FYK" kind="embed" identifier="toPageViewController" id="p44-Mh-f9d"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MiG-B1-Rf1">
+                                <rect key="frame" x="76" y="655" width="262" height="52"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
-                                <state key="normal" title="Roll" backgroundImage="Button">
+                                <state key="normal" title="Suggest" backgroundImage="button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="rollButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqd-WJ-WPa"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7b-eQ-YEq">
-                                <rect key="frame" x="0.0" y="108" width="414" height="356"/>
-                                <connections>
-                                    <segue destination="1cy-Mn-FYK" kind="embed" identifier="toPageViewController" id="p44-Mh-f9d"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="AxL-IH-nmG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BMj-DG-3uZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdQ-Zg-Zjo" secondAttribute="bottom" constant="80" id="Di6-wp-gVk"/>
                             <constraint firstAttribute="trailing" secondItem="OSZ-t5-xb5" secondAttribute="trailing" id="FnJ-If-TU0"/>
                             <constraint firstItem="A7b-eQ-YEq" firstAttribute="trailing" secondItem="OSZ-t5-xb5" secondAttribute="trailing" id="H6C-4q-v4H"/>
-                            <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="AxL-IH-nmG" secondAttribute="bottom" constant="20" id="KH7-U0-6A3"/>
                             <constraint firstItem="A7b-eQ-YEq" firstAttribute="leading" secondItem="OSZ-t5-xb5" secondAttribute="leading" id="XQZ-dX-ngo"/>
                             <constraint firstItem="MiG-B1-Rf1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XSy-lJ-k6M"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="f1x-rq-PGU"/>
                             <constraint firstItem="OSZ-t5-xb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hgi-4L-Xdu"/>
-                            <constraint firstItem="AxL-IH-nmG" firstAttribute="top" secondItem="A7b-eQ-YEq" secondAttribute="bottom" constant="30" id="irM-zq-gUG"/>
-                            <constraint firstItem="A7b-eQ-YEq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="neK-Fn-Hf3"/>
                             <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="top" secondItem="MiG-B1-Rf1" secondAttribute="bottom" constant="20" id="oQg-Hf-KNg"/>
                             <constraint firstAttribute="bottom" secondItem="OSZ-t5-xb5" secondAttribute="bottom" id="ogY-zM-V0y"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdQ-Zg-Zjo" secondAttribute="bottom" constant="168" id="p6Q-8H-sgh"/>
-                            <constraint firstAttribute="trailing" secondItem="1D5-bX-8qC" secondAttribute="trailing" constant="-38" id="pm8-Cd-V2V"/>
                             <constraint firstItem="QdQ-Zg-Zjo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2H-tT-599"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1D5-bX-8qC" secondAttribute="bottom" constant="35" id="yH3-ZN-oca"/>
+                            <constraint firstItem="A7b-eQ-YEq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zRj-cq-YRq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -84,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1040.8" y="138.17733990147784"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="137.94642857142856"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="t9Z-OY-tdw">
@@ -204,9 +188,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button" width="186" height="52"/>
         <image name="background" width="256" height="256"/>
-        <image name="rootScreenPiggy1" width="492" height="407"/>
-        <image name="rootScreenPiggy2" width="504" height="372"/>
+        <image name="button" width="265" height="65"/>
     </resources>
 </document>
