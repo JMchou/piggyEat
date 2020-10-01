@@ -14,7 +14,7 @@ This app randomly suggests a choice of food from the list stored by the user.
 
 Demo | Add Item | Delete Item
 :-------------------------:|:-------------------------:|:-------------------------:
-![fdsafdsa](/Demo/Demo1.gif)  |  ![](/Demo/Demo2.gif) | ![](/Demo/Demo3.gif)
+![pic](/Demo/Demo1.gif)  |  ![](/Demo/Demo2.gif) | ![](/Demo/Demo3.gif)
 
 
 ## Contributors:
